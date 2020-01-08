@@ -1,0 +1,63 @@
+﻿@inject PostController postController;
+
+@{
+    ViewData["Title"] = "Showrank";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <div class="jumbotron" style="background: #f2f2f2 !important">
+                <h4 class="text-center mt-5">My posts</h4>
+                <hr class="mb-5" />
+
+                @foreach (var post in await postController.GetMyPosts())
+                {
+                    <div class="card border-primary mb-3">
+                        <div class="card-header">Me <br /> Posted on @post.Date.ToString("MMMM dd, yyyy 'at' HH:mm")</div>
+                        <div class="card-body text-primary">
+                            <h5 class="card-title">
+                                <font color="#ff0000">
+
+                                    @if (post.ShowType == "movie")
+                                    {
+                                        <i class="fas fa-film"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="fas fa-tv"></i>
+                                    }
+
+                                </font>
+                                &nbsp;
+                                @post.NameOfTheShow
+                            </h5>
+                            <p>
+                                <font color="#ffe51c">
+
+                                    @for (var i = 1; i <= post.RatingValue; i++)
+                                    {
+                                        <i class="fas fa-star"></i>
+                                    }
+
+                                </font>
+                            </p>
+                            <p class="card-text">@post.Opinion</p>
+                            <p class="text-right">
+
+                                <font color="#ff0000">
+                                    <i class="fas fa-trash-alt"></i>
+                                    &nbsp;
+                                    @Html.ActionLink("Remove", "Remove", "Post", new { idOfPost = post.Id }, null)
+                                </font>
+
+                            </p>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+

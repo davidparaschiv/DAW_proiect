@@ -1,0 +1,27 @@
+﻿@inject ProfileController  profileController;
+
+@{
+    ViewData["Title"] = "Showrank";
+}
+
+<div class="text-center">
+
+    <h4 class="mt-5">Top profiles</h4>
+    <hr class="mb-5" />
+
+    <div class="card" style="width: 1000px;">
+        <ul class="list-group list-group-flush">
+
+            @foreach (var profile in await profileController.GetTopProfiles())
+            {
+
+                <li class="list-group-item">
+                    @profile.FirstName @profile.LastName (@profile.Email) - @profile.HelpsNumber helps
+                </li>
+
+            }
+
+        </ul>
+    </div>
+</div>
+

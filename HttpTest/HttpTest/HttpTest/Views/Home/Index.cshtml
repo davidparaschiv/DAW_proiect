@@ -1,0 +1,75 @@
+﻿@model HomeIndexViewModel
+@inject ProfileController  profileController;
+@inject PostController postController;
+
+@{
+    ViewData["Title"] = "Showrank";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+ 
+        <!-- Search form -->
+        <form class="form-inline active-cyan-3 active-cyan-4 mb-3" method="post" asp-controller="Profile" asp-action="Index">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <input class="form-control ml-3" type="email" asp-for="EmailToSearchProfileBy" placeholder="Search profile by email.." aria-label="Search" style="width:500px !important">
+        </form>
+        
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <div class="jumbotron" style="background: #f2f2f2 !important">
+                <h4 class="text-center mt-5">Recommendation feed</h4>
+                <hr class="mb-5" />
+
+                @foreach (var post in await postController.GetFeedOfPosts())
+                {
+                    <div class="card border-primary mb-3">
+                        <div class="card-header">@await profileController.GetFullNameFromUserId(post.IdOfProfile) <br /> Posted on @post.Date.ToString("MMMM dd, yyyy 'at' HH:mm")</div>
+                        <div class="card-body text-primary">
+                            <h5 class="card-title">
+                                <font color="#ff0000">
+
+                                    @if (post.ShowType == "movie")
+                                    {
+                                        <i class="fas fa-film"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="fas fa-tv"></i>
+                                    }
+
+                                </font>
+                                &nbsp;
+                                @post.NameOfTheShow
+                            </h5>
+                            <p>
+                                <font color="#ffe51c">
+
+                                    @for (var i = 1; i <= post.RatingValue; i++)
+                                    {
+                                        <i class="fas fa-star"></i>
+                                    }
+
+                                </font>
+                            </p>
+                            <p class="card-text">@post.Opinion</p>
+                            <p class="text-right">
+
+                                <i class="fas fa-tasks"></i>
+                                &nbsp;
+                                @Html.ActionLink("Add to My watch list", "Add", "ToSeeListItem", new { idOfPost = post.Id }, null)
+
+                            </p>
+                        </div>
+                    </div>
+
+                }
+                
+            </div>
+        </div>
+    </div>
+</div>

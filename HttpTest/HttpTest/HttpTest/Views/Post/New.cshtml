@@ -1,0 +1,38 @@
+﻿@model NewPostViewModel
+
+@{
+    ViewData["Title"] = "Showrank";
+}
+
+<div class="text-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <hr class="my-5" />
+                <p class="mb-3">Create a new post</p>
+
+                <form method="post">
+                    <div class="form-group">
+                        <input class="form-control" asp-for="NameOfTheShow" placeholder="Name of the show" required />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="radio" asp-for="ShowType" value="movie" checked> Movie
+                        <input type="radio" asp-for="ShowType" value="tv"> TV
+                    </div>
+
+                    <div class="form-group">
+                        <input type="number" min="1" max="5" class="form-control" asp-for="RatingValue" placeholder="Your rating" required />
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class="form-control" asp-for="Opinion" placeholder="Write your opinion about the show.." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Share with others</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

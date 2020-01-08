@@ -1,0 +1,73 @@
+﻿@model ProfileViewModel
+@inject ProfileController  profileController;
+
+@{
+    ViewData["Title"] = "Showrank";
+}
+
+@if (Model.Email == null)
+{
+    <p class="text-center bg-danger text-white">Profile does not exist.</p>
+}
+else
+{
+
+    <div class="text-center">
+
+        <p><h1 class="display-1"><i class="far fa-user-circle"></i></h1></p>
+        <p><h1>@Model.FullName</h1></p>
+        <p><h2>@Model.Email</h2></p>
+        <p><h5>Bio:<br />@Model.Bio</h5></p>
+        <p><h4>@Model.HelpsNumber Helps</h4></p>
+        <p><h4>@Model.FollowersNumber Followers</h4></p>
+        <p><h4>@Model.FollowingNumber Following</h4></p>
+
+        <p>
+            <h3>
+
+                @if (Model.IsFollowedByLoggedInUser == true && Model.IsLoggedInUser == false)
+                {
+                    @Html.ActionLink("Unfollow", "ApplyUnfollow", "FollowsTable", new { idOfWhoIsBeingFollowed = Model.Id, idOfTheOneWhoFollows = await profileController.GetIdOfLoggedInUser() }, null)
+                }
+                else if (Model.IsLoggedInUser == false)
+                {
+                    @Html.ActionLink("Follow", "ApplyFollow", "FollowsTable", new { idOfWhoIsBeingFollowed = Model.Id, idOfTheOneWhoFollows = await profileController.GetIdOfLoggedInUser() }, null)
+                }
+
+            </h3>
+        </p>
+
+        <hr style="width:400px !important" />
+
+        <p>
+            <h4>See Followers</h4>
+            <br />
+            <ul style="list-style-type:none !important;">
+
+                @foreach (var follower in Model.Followers)
+                {
+                    <li><i class="fas fa-circle text-success"></i> @follower</li>
+                }
+
+            </ul>
+        </p>
+
+        <hr style="width:400px !important" />
+
+        <p>
+            <h4>See Following</h4>
+            <br />
+            <ul style="list-style-type:none !important;">
+
+                @foreach (var following in Model.Following)
+                {
+                    <li><i class="fas fa-circle text-success"></i> @following</li>
+                }
+
+            </ul>
+        </p>
+
+    </div>
+
+}
+

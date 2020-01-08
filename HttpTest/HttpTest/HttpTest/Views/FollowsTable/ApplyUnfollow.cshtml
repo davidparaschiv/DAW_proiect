@@ -1,0 +1,15 @@
+﻿@model ApplyUnfollowViewModel
+
+@{
+    ViewData["Title"] = "Showrank";
+}
+
+@if (Model.UnfollowOperationSuccess == true)
+{
+    <p class="text-center bg-info text-white">You just unfollowed someone. You will not longer see posts from him/her in your feed</p>
+}
+else
+{
+    <p class="text-center bg-danger text-white">Something went wrong, try to unfollow the person again</p>
+}
+

@@ -1,0 +1,16 @@
+﻿@model ApplyFollowViewModel
+
+@{
+    ViewData["Title"] = "Showrank";
+}
+
+@if (Model.FollowOperationSuccess == true)
+{
+    <p class="text-center bg-info text-white">Congrats! You now follow a new person on Showrank, check out your feed to see posts from him/her</p>
+}
+else
+{
+    <p class="text-center bg-danger text-white">Something went wrong, try to follow the person again</p>
+}
+
+

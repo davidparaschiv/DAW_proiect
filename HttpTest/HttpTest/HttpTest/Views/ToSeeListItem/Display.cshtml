@@ -1,0 +1,50 @@
+﻿@inject ToSeeListItemController  toSeeListItemController;
+
+@{
+    ViewData["Title"] = "Showrank";
+}
+
+<div class="text-center">
+
+    <h4 class="mt-5">My watch list</h4>
+    <hr class="mb-5" />
+
+    <div class="card" style="width: 1000px;">
+        <ul class="list-group list-group-flush">
+
+            @foreach (var toSeeListItemViewModel in await toSeeListItemController.GetListDisplayInfo())
+            {
+
+                <li class="list-group-item">
+                    @toSeeListItemViewModel.ShowName (@toSeeListItemViewModel.ShowType)
+                    &nbsp;
+                    <font color="#ff0000">
+                        <i class="fas fa-trash-alt"></i>
+                        &nbsp;
+                        @Html.ActionLink("Remove", "Remove", "ToSeeListItem", new { idOfPost = toSeeListItemViewModel.IdOfPost }, null)
+                    </font>
+                    <br />
+                    From: @toSeeListItemViewModel.PosterFullName
+                    <br />
+                    <font color="#00ff00">
+                        <i class="far fa-laugh-wink"></i>
+                        &nbsp;
+                        @Html.ActionLink("Send thanks", "SendThanks", "ToSeeListItem", new { toId = toSeeListItemViewModel.IdOfPosterProfile }, null)
+                    </font>
+                </li>
+
+            }
+
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
