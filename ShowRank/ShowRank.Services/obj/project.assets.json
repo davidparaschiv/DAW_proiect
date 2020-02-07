@@ -5782,11 +5782,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\ShowRank\\ShowRank\\ShowRank.Services\\ShowRank.Services.csproj",
+      "projectUniqueName": "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\proiect final\\ShowRank\\ShowRank\\ShowRank.Services\\ShowRank.Services.csproj",
       "projectName": "ShowRank.Services",
-      "projectPath": "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\ShowRank\\ShowRank\\ShowRank.Services\\ShowRank.Services.csproj",
+      "projectPath": "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\proiect final\\ShowRank\\ShowRank\\ShowRank.Services\\ShowRank.Services.csproj",
       "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\ShowRank\\ShowRank\\ShowRank.Services\\obj\\",
+      "outputPath": "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\proiect final\\ShowRank\\ShowRank\\ShowRank.Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5802,8 +5802,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\ShowRank\\ShowRank\\ShowRank.Domain.EF\\ShowRank.Domain.EF.csproj": {
-              "projectPath": "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\ShowRank\\ShowRank\\ShowRank.Domain.EF\\ShowRank.Domain.EF.csproj"
+            "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\proiect final\\ShowRank\\ShowRank\\ShowRank.Domain.EF\\ShowRank.Domain.EF.csproj": {
+              "projectPath": "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\proiect final\\ShowRank\\ShowRank\\ShowRank.Domain.EF\\ShowRank.Domain.EF.csproj"
             }
           }
         }

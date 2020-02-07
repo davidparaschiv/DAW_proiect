@@ -8154,11 +8154,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\ShowRank\\HttpTest\\HttpTest\\HttpTest\\HttpTest.csproj",
+      "projectUniqueName": "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\proiect final\\ShowRank\\HttpTest\\HttpTest\\HttpTest\\HttpTest.csproj",
       "projectName": "HttpTest",
-      "projectPath": "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\ShowRank\\HttpTest\\HttpTest\\HttpTest\\HttpTest.csproj",
+      "projectPath": "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\proiect final\\ShowRank\\HttpTest\\HttpTest\\HttpTest\\HttpTest.csproj",
       "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\ShowRank\\HttpTest\\HttpTest\\HttpTest\\obj\\",
+      "outputPath": "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\proiect final\\ShowRank\\HttpTest\\HttpTest\\HttpTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config",

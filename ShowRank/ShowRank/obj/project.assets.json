@@ -747,11 +747,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\ShowRank\\ShowRank\\ShowRank\\ShowRank.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\proiect final\\ShowRank\\ShowRank\\ShowRank\\ShowRank.Domain.csproj",
       "projectName": "ShowRank.Domain",
-      "projectPath": "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\ShowRank\\ShowRank\\ShowRank\\ShowRank.Domain.csproj",
+      "projectPath": "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\proiect final\\ShowRank\\ShowRank\\ShowRank\\ShowRank.Domain.csproj",
       "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\ShowRank\\ShowRank\\ShowRank\\obj\\",
+      "outputPath": "C:\\Users\\David\\Data\\w\\fac\\anul 4\\sem 1\\DAW\\proiect final\\ShowRank\\ShowRank\\ShowRank\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config",
